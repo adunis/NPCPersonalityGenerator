@@ -1182,7 +1182,7 @@ function generateReactions() {
 
     if (motto) {
       const mottoHeader = document.createElement('li');
-      mottoHeader.innerHTML = `<strong>Motto:</strong> ${motto} (Said in a <em>${unmatchedString}</em> way)`;
+      mottoHeader.innerHTML = `<strong>Motto:</strong> "${motto}" (Said in a <em>${unmatchedString}</em> way)`;
       reactionList.appendChild(mottoHeader);
     }
   }
