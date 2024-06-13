@@ -990,6 +990,116 @@ const reactions = {
 
 };
 
+
+       const archetypes = {
+            "Aloof,Anxious,Calm": { archetype: "Tsundere", motto: "I’m not sure how to feel about this." },
+            "Aloof,Calm,Detached": { archetype: "Observer", motto: "I prefer to watch from the sidelines." },
+            "Aloof,Conflicted,Distrustful": { archetype: "Skeptic", motto: "I’ll believe it when I see it." },
+            "Aloof,Detached,Jaded": { archetype: "Loner", motto: "I don’t need anyone." },
+            "Aloof,Grumpy,Irritable": { archetype: "Grump", motto: "Get off my lawn." },
+            "Aloof,Stoic,Detached": { archetype: "Ice King/Queen", motto: "Emotions are a waste of time." },
+            "Aloof,Skeptical,Suspicious": { archetype: "Cynic", motto: "Trust no one." },
+            "Anxious,Calm,Humble": { archetype: "Peacemaker", motto: "Let’s find a way to get along." },
+            "Anxious,Conflicted,Conflicted": { archetype: "Worrier", motto: "I’m not sure about this." },
+            "Anxious,Conflicted,Timid": { archetype: "Self-Doubter", motto: "I don’t think I can do this." },
+            "Anxious,Nervous,Timid": { archetype: "Coward", motto: "Better safe than sorry." },
+            "Boastful,Confident,Proud": { archetype: "Egoist", motto: "I am the best." },
+            "Boastful,Confident,Showy": { archetype: "Show-Off", motto: "Watch me shine." },
+            "Boastful,Confident,Vain": { archetype: "Narcissist", motto: "It’s all about me." },
+            "Calm,Collected,Serene": { archetype: "Zen Master", motto: "Peace comes from within." },
+            "Calm,Collected,Stoic": { archetype: "Rock", motto: "Stay strong and carry on." },
+            "Calm,Collected,Wise": { archetype: "Sage", motto: "Wisdom is the path to peace." },
+            "Calm,Humble,Patient": { archetype: "Saint", motto: "Patience and humility lead to virtue." },
+            "Calm,Patient,Wise": { archetype: "Mentor", motto: "Teach by example." },
+            "Calm,Serene,Wise": { archetype: "Tranquil Sage", motto: "Serenity in wisdom." },
+            "Cheerful,Chipper,Optimistic": { archetype: "Eternal Optimist", motto: "Always look on the bright side." },
+            "Cheerful,Chipper,Playful": { archetype: "Mischief Maker", motto: "Let’s have some fun!" },
+            "Cheerful,Chipper,Positive": { archetype: "Beacon", motto: "Shine your light on the world." },
+            "Cheerful,Happy,Upbeat": { archetype: "Jolly", motto: "Keep smiling!" },
+            "Cheerful,Optimistic,Positive": { archetype: "Optimist", motto: "Good things are coming." },
+            "Cheerful,Optimistic,Supportive": { archetype: "Sunshine", motto: "Bring joy wherever you go." },
+            "Conflicted,Anxious,Doubtful": { archetype: "Worrier", motto: "I’m not sure about this." },
+            "Conflicted,Anxious,Insecure": { archetype: "Self-Doubter", motto: "I don’t think I can do this." },
+            "Conflicted,Confused,Unsure": { archetype: "Doubter", motto: "I need more time to decide." },
+            "Courteous,Friendly,Generous": { archetype: "Gentleman/Lady", motto: "Manners maketh the person." },
+            "Courteous,Polite,Respectful": { archetype: "Polite Person", motto: "Respect and kindness for all." },
+            "Curious,Inquisitive,Observant": { archetype: "Explorer", motto: "Seek and you shall find." },
+            "Curious,Inquisitive,Questioning": { archetype: "Investigator", motto: "The truth is out there." },
+            "Deceptive,Scheming,Persuasive": { archetype: "Manipulator", motto: "Bend others to your will." },
+            "Deceptive,Scheming,Tricky": { archetype: "Trickster", motto: "Nothing is as it seems." },
+            "Determined,Focused,Resilient": { archetype: "Achiever", motto: "Never give up." },
+            "Determined,Focused,Tenacious": { archetype: "Go-Getter", motto: "Success through perseverance." },
+            "Determined,Motivated,Resilient": { archetype: "Overcomer", motto: "Rise above every challenge." },
+            "Detached,Jaded,Realistic": { archetype: "Realist", motto: "Face the facts." },
+            "Distrustful,Cynical,Paranoid": { archetype: "Skeptic", motto: "Doubt everything." },
+            "Distrustful,Skeptical,Paranoid": { archetype: "Conspirator", motto: "There’s always a hidden agenda." },
+            "Dramatic,Boastful,Showy": { archetype: "Showman", motto: "Life is a stage." },
+            "Dramatic,Flamboyant,Theatrical": { archetype: "Performer", motto: "Put on a show." },
+            "Eager,Excitable,Enthusiastic": { archetype: "Eager Beaver", motto: "Let’s get to it!" },
+            "Eager,Optimistic,Supportive": { archetype: "Cheerleader", motto: "You can do it!" },
+            "Energetic,Excitable,Playful": { archetype: "Ball of Energy", motto: "Keep moving!" },
+            "Energetic,Motivated,Positive": { archetype: "Go-Getter", motto: "Go for it!" },
+            "Excitable,Enthusiastic,Optimistic": { archetype: "Excited Enthusiast", motto: "I can’t wait!" },
+            "Experienced,Knowledgeable,Wise": { archetype: "Sage", motto: "Wisdom through experience." },
+            "Friendly,Cheerful,Optimistic": { archetype: "Buddy", motto: "Friends are the family you choose." },
+            "Friendly,Generous,Kind": { archetype: "Heart of Gold", motto: "Kindness is the key." },
+            "Friendly,Happy,Outgoing": { archetype: "Life of the Party", motto: "Let’s have fun!" },
+            "Grumpy,Impatient,Irritable": { archetype: "Grump", motto: "Leave me alone." },
+            "Grumpy,Stubborn,Unyielding": { archetype: "Curmudgeon", motto: "It’s my way or the highway." },
+            "Haughty,Proud,Confident": { archetype: "Noble", motto: "Act with honor and pride." },
+            "Humble,Kind,Generous": { archetype: "Humble Soul", motto: "Give without expecting anything." },
+            "Impatient,Irritable,Stubborn": { archetype: "Impatient Soul", motto: "Why wait?" },
+            "Inquisitive,Curious,Observant": { archetype: "Detective", motto: "Solve the mystery." },
+            "Inspirational,Confident,Supportive": { archetype: "Leader", motto: "Lead by example." },
+            "Irritable,Grumpy,Stubborn": { archetype: "Grump", motto: "Get off my lawn." },
+            "Jaded,Cynical,Realistic": { archetype: "Realist", motto: "Face the facts." },
+            "Jolly,Cheerful,Happy": { archetype: "Jovial Person", motto: "Spread joy." },
+            "Knowledgeable,Experienced,Wise": { archetype: "Wise Elder", motto: "Wisdom through experience." },
+            "Lazy,Unmotivated,Unenthusiastic": { archetype: "Slacker", motto: "Why bother?" },
+            "Loyal,Supportive,Faithful": { archetype: "Faithful Friend", motto: "I’ve got your back." },
+            "Melancholic,Sad,Downcast": { archetype: "Melancholy Soul", motto: "Life is a tragedy." },
+            "Mischievous,Deceptive,Tricky": { archetype: "Prankster", motto: "Keep them guessing." },
+            "Motivated,Driven,Focused": { archetype: "Ambitious Achiever", motto: "Reach for the stars." },
+            "Naive,Innocent,Trusting": { archetype: "Innocent", motto: "Believe in the good in people." },
+            "Optimistic,Cheerful,Positive": { archetype: "Positive Thinker", motto: "Good things are coming." },
+            "Paranoid,Cynical,Distrustful": { archetype: "Paranoid Thinker", motto: "Trust no one." },
+            "Patient,Calm,Wise": { archetype: "Calm Mentor", motto: "Patience is a virtue." },
+            "Persuasive,Charming,Charismatic": { archetype: "Charmer", motto: "Win them over." },
+            "Proud,Haughty,Confident": { archetype: "Prideful Leader", motto: "I lead with pride." },
+            "Relaxed,Calm,Easygoing": { archetype: "Laid-back Person", motto: "Take it easy." },
+            "Resilient,Determined,Focused": { archetype: "Resilient Fighter", motto: "Keep fighting." },
+            "Scheming,Deceptive,Manipulative": { archetype: "Mastermind", motto: "Plan your moves carefully." },
+            "Serious,Stern,Grave": { archetype: "Serious Soul", motto: "Life is no laughing matter." },
+            "Skeptical,Distrustful,Cynical": { archetype: "Doubting Thomas", motto: "I need proof." },
+            "Stoic,Calm,Collected": { archetype: "Stoic Hero", motto: "Stay strong and carry on." },
+            "Supportive,Encouraging,Positive": { archetype: "Supportive Friend", motto: "I’m here for you." },
+            "Suspicious,Distrustful,Cynical": { archetype: "Suspicious Mind", motto: "Question everything." },
+            "Vain,Boastful,Showy": { archetype: "Peacock", motto: "Look at me!" },
+            "Warm,Kind,Generous": { archetype: "Warm-Hearted Person", motto: "Spread warmth and kindness." },
+            "Witty,Funny,Charming": { archetype: "Quick Wit", motto: "Laughter is the best medicine." }
+        };
+
+
+function getArchetype(personalities) {
+  const sortedPersonalities = personalities.sort().join(',');
+  if (archetypes[sortedPersonalities]) {
+    return archetypes[sortedPersonalities];
+  }
+  
+  // Check for partial matches
+  for (const key of Object.keys(archetypes)) {
+    const keyPersonalities = key.split(',');
+    const matchedPersonalities = personalities.filter(p => keyPersonalities.includes(p));
+    if (matchedPersonalities.length >= 2) {
+      const unmatchedPersonalities = personalities.filter(p => !keyPersonalities.includes(p));
+      const unmatchedString = unmatchedPersonalities.length > 0 ? ` ${unmatchedPersonalities.join(', ')} ` : '';
+      return { archetype: `The ${unmatchedString} ${archetypes[key].archetype}`, motto: archetypes[key].motto };
+    }
+  }
+
+  return { archetype: "Nondescript", motto: "" };
+}
+
 // Populate select options
 document.addEventListener('DOMContentLoaded', () => {
   const selectElements = document.querySelectorAll('select');
@@ -1008,13 +1118,26 @@ function getRandomPersonality() {
   return personalities[Math.floor(Math.random() * personalities.length)];
 }
 
-document.getElementById('randomize').addEventListener('click', () => {
+function randomizePersonalities() {
   document.getElementById('personality1').value = getRandomPersonality();
   document.getElementById('personality2').value = getRandomPersonality();
   document.getElementById('personality3').value = getRandomPersonality();
+}
+
+document.getElementById('randomize').addEventListener('click', () => {
+  randomizePersonalities();
 });
 
 document.getElementById('generate').addEventListener('click', () => {
+  generateReactions();
+});
+
+document.getElementById('randomizeAndGenerate').addEventListener('click', () => {
+  randomizePersonalities();
+  generateReactions();
+});
+
+function generateReactions() {
   const selectedPersonalities = [
     document.getElementById('personality1').value,
     document.getElementById('personality2').value,
@@ -1022,6 +1145,8 @@ document.getElementById('generate').addEventListener('click', () => {
   ];
   
   const uniquePersonalities = [...new Set(selectedPersonalities)];
+
+  const { archetype, motto } = getArchetype(uniquePersonalities);
 
   const scenarios = [
     "greeting", 
@@ -1049,6 +1174,19 @@ document.getElementById('generate').addEventListener('click', () => {
   personalityHeader.innerHTML = `<strong>Personality:</strong> ${uniquePersonalities.join(', ')}`;
   reactionList.appendChild(personalityHeader);
 
+  // Render archetype if available
+  if (archetype !== "Nondescript") {
+    const archetypeHeader = document.createElement('li');
+    archetypeHeader.innerHTML = `<strong>Archetype:</strong> ${archetype}`;
+    reactionList.appendChild(archetypeHeader);
+
+    if (motto) {
+      const mottoHeader = document.createElement('li');
+      mottoHeader.innerHTML = `<strong>Motto:</strong> ${motto}`;
+      reactionList.appendChild(mottoHeader);
+    }
+  }
+
   scenarios.forEach(scenario => {
     const [category, subcategory] = scenario.split('.');
     const selectedPersonality = selectedPersonalities[Math.floor(Math.random() * selectedPersonalities.length)];
@@ -1061,12 +1199,12 @@ document.getElementById('generate').addEventListener('click', () => {
     if (reactionsForScenario) {
       const randomReaction = reactionsForScenario[Math.floor(Math.random() * reactionsForScenario.length)];
       const listItem = document.createElement('li');
-      listItem.innerHTML = `<span class="reaction-category">${scenario.replace('ethics.', '')}:</span> <span class="reaction-content">${randomReaction} (${selectedPersonality})</span>`;
+      listItem.innerHTML = `<span class="reaction-category">${scenario.replace('ethics.', '')}:</span> <span class="reaction-content"><em>${randomReaction}</em> (${selectedPersonality})</span>`;
       reactionList.appendChild(listItem);
     } else {
       const listItem = document.createElement('li');
-      listItem.innerHTML = `<span class="reaction-category">${scenario.replace('ethics.', '')}:</span> <span class="reaction-content">No reaction available (${selectedPersonality})</span>`;
+      listItem.innerHTML = `<span class="reaction-category">${scenario.replace('ethics.', '')}:</span> <span class="reaction-content"><em>No reaction available</em> (${selectedPersonality})</span>`;
       reactionList.appendChild(listItem);
     }
   });
-});
+}
