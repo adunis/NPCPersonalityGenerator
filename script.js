@@ -1093,7 +1093,7 @@ function getArchetype(personalities) {
     if (matchedPersonalities.length >= 2) {
       const unmatchedPersonalities = personalities.filter(p => !keyPersonalities.includes(p));
       const unmatchedString = unmatchedPersonalities.length > 0 ? ` ${unmatchedPersonalities.join(', ')} ` : '';
-      return { archetype: `The ${unmatchedString} ${archetypes[key].archetype}`, motto: archetypes[key].motto };
+      return { archetype: `The ${unmatchedString} ${archetypes[key].archetype}`, motto: archetypes[key].motto, unmatchedString: unmatchedString };
     }
   }
 
@@ -1146,7 +1146,7 @@ function generateReactions() {
   
   const uniquePersonalities = [...new Set(selectedPersonalities)];
 
-  const { archetype, motto } = getArchetype(uniquePersonalities);
+  const { archetype, motto, unmatchedString } = getArchetype(uniquePersonalities);
 
   const scenarios = [
     "greeting", 
@@ -1182,7 +1182,7 @@ function generateReactions() {
 
     if (motto) {
       const mottoHeader = document.createElement('li');
-      mottoHeader.innerHTML = `<strong>Motto:</strong> ${motto}`;
+      mottoHeader.innerHTML = `<strong>Motto:</strong> ${motto} (Said in a <em>${unmatchedString}</em> way)`;
       reactionList.appendChild(mottoHeader);
     }
   }
