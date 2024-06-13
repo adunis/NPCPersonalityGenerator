@@ -1,0 +1,67 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 500px; /* Increased width */
+  text-align: center;
+}
+
+.selector label {
+  display: block;
+  margin-top: 10px;
+}
+
+.selector select {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px;
+  margin: 5px;
+  width: 120px;
+  cursor: pointer;
+}
+
+#results {
+  margin-top: 20px;
+  text-align: left;
+}
+
+#results h2 {
+  text-align: center;
+}
+
+#reactionList {
+  list-style: none;
+  padding: 0;
+}
+
+#reactionList li {
+  margin-bottom: 10px;
+}
+
+.reaction-category {
+  font-weight: bold;
+}
+
+.reaction-content {
+  margin-left: 10px;
+  font-style: italic;
+}

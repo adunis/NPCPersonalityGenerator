@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NPC Reaction Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>NPC Reaction Generator</h1>
+    <div class="selector">
+      <label for="personality1">Personality 1:</label>
+      <select id="personality1"></select>
+
+      <label for="personality2">Personality 2:</label>
+      <select id="personality2"></select>
+
+      <label for="personality3">Personality 3:</label>
+      <select id="personality3"></select>
+    </div>
+    <div class="buttons">
+      <button id="generate">Generate Reactions</button>
+      <button id="randomize">Randomize</button>
+    </div>
+    <div id="results">
+      <h2>Reactions</h2>
+      <ul id="reactionList"></ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
