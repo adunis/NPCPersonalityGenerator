@@ -990,8 +990,6 @@ const reactions = {
 
 };
 
-
-
 // Populate select options
 document.addEventListener('DOMContentLoaded', () => {
   const selectElements = document.querySelectorAll('select');
@@ -1023,6 +1021,8 @@ document.getElementById('generate').addEventListener('click', () => {
     document.getElementById('personality3').value
   ];
   
+  const uniquePersonalities = [...new Set(selectedPersonalities)];
+
   const scenarios = [
     "greeting", 
     "threatened", 
@@ -1041,9 +1041,13 @@ document.getElementById('generate').addEventListener('click', () => {
     "ethics.monstrousRaces"
   ];
   
-
- const reactionList = document.getElementById('reactionList');
+  const reactionList = document.getElementById('reactionList');
   reactionList.innerHTML = '';
+
+  // Render selected personalities
+  const personalityHeader = document.createElement('li');
+  personalityHeader.innerHTML = `<strong>Personality:</strong> ${uniquePersonalities.join(', ')}`;
+  reactionList.appendChild(personalityHeader);
 
   scenarios.forEach(scenario => {
     const [category, subcategory] = scenario.split('.');
@@ -1057,11 +1061,11 @@ document.getElementById('generate').addEventListener('click', () => {
     if (reactionsForScenario) {
       const randomReaction = reactionsForScenario[Math.floor(Math.random() * reactionsForScenario.length)];
       const listItem = document.createElement('li');
-      listItem.textContent = `${scenario.replace('ethics.', '')}: ${randomReaction} (${selectedPersonality})`;
+      listItem.innerHTML = `<span class="reaction-category">${scenario.replace('ethics.', '')}:</span> <span class="reaction-content">${randomReaction} (${selectedPersonality})</span>`;
       reactionList.appendChild(listItem);
     } else {
       const listItem = document.createElement('li');
-      listItem.textContent = `${scenario.replace('ethics.', '')}: No reaction available (${selectedPersonality})`;
+      listItem.innerHTML = `<span class="reaction-category">${scenario.replace('ethics.', '')}:</span> <span class="reaction-content">No reaction available (${selectedPersonality})</span>`;
       reactionList.appendChild(listItem);
     }
   });
